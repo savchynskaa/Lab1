@@ -6,8 +6,8 @@ const Movies = (props) => {
 
     return (
         <div className='movies'>
-            {movies.length ? movies.map(movie => (
-                <Movie key={movie.imdbID} {...movie}/>
+            {movies.length ? movies.map((movie, index) => (
+                <Movie key={movie.imdbID || index} {...movie}/>
             )) : <h4>Nothing Found</h4>
         }
         </div>
